@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        padding: 200px;
+      }
+      .icon-wrapper {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color: gray;
+        text-align: center;
+        line-height: 45px;
+        border-radius: 50%;
+        position: relative;
+      }
+
+      .icon-wrapper svg {
+        fill: white;
+        width: 16px;
+        height: 16px;
+      }
+
+      .icon-wrapper:hover {
+        opacity: 0.8;
+      }
+
+      .icon-wrapper::before {
+        content: attr(data-tooltip);
+        color: white;
+        background-color: lightgray;
+        position: absolute;
+        top: -65%;
+        left: -50%;
+        padding: 5px;
+        line-height: 10px;
+        border-radius: 4px;
+        white-space: nowrap;
+        opacity: 0;
+        transition: opacity 0.3s linear;
+      }
+
+      .icon-wrapper:hover::before {
+        opacity: 1;
+      }
+    </style>
+    <title>Tooltip</title>
+  </head>
+  <body>
+    <span data-tooltip="microphone" class="icon-wrapper">
+      <svg
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+      >
+        <path
+          d="M15 22c2.761 0 5-2.239 5-5v-12c0-2.761-2.239-5-5-5s-5 2.239-5 5v12c0 2.761 2.239 5 5 5zM22 14v3c0 3.866-3.134 7-7 7s-7-3.134-7-7v-3h-2v3c0 4.632 3.5 8.447 8 8.944v4.056h-4v2h10v-2h-4v-4.056c4.5-0.497 8-4.312 8-8.944v-3h-2z"
+        ></path>
+      </svg>
+    </span>
+
+    <span data-tooltip="home button" class="icon-wrapper">
+      <svg
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+      >
+        <path
+          d="M32 18.451l-16-12.42-16 12.42v-5.064l16-12.42 16 12.42zM28 18v12h-8v-8h-8v8h-8v-12l12-9z"
+        ></path>
+      </svg>
+    </span>
+
+    <span data-tooltip="camera button" class="icon-wrapper">
+      <svg
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+      >
+        <path
+          d="M32 18.451l-16-12.42-16 12.42v-5.064l16-12.42 16 12.42zM28 18v12h-8v-8h-8v8h-8v-12l12-9z"
+        ></path>
+      </svg>
+    </span>
+  </body>
+</html>

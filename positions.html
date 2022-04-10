@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* 
+        position: static,
+                relative,
+                absolute,
+                fixed,
+                sticky
+        */
+
+      html {
+        scroll-behavior: smooth;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 5000px;
+      }
+
+      /* .visual {
+        width: 50%;
+        height: 300px;
+        color: white;
+        font-size: 50px;
+      } */
+      /* .static-position {
+        background-color: red;
+      }
+      .position {
+        background-color: blue;
+        position: relative;
+        bottom: 50px;
+        z-index: -1;
+      } */
+
+      /* .wrapper {
+        position: relative;
+        background-color: blue;
+      }
+
+      .child {
+        position: absolute;
+        background-color: red;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+      } */
+
+      .back-to-top {
+        position: fixed;
+        display: inline-block;
+        right: 50px;
+        bottom: 50px;
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      section {
+        height: 1000px;
+      }
+
+      nav {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+      }
+
+      ul {
+        margin: 0 auto;
+        width: max-content;
+      }
+
+      ul li {
+        display: inline-block;
+      }
+
+      ul li a {
+        text-decoration: none;
+        font-size: 20px;
+        color: black;
+        padding-right: 10px;
+      }
+    </style>
+    <title>Positions</title>
+  </head>
+  <body>
+    <!-- <div class="static-position visual">hello world</div> -->
+    <!-- <div class="position visual"></div> -->
+    <!-- <div
+      style="
+        height: 500px;
+        width: 400px;
+        background-color: yellow;
+        position: relative;
+      "
+    ></div>
+
+    <div class="wrapper visual">
+      <div class="child"></div>
+    </div> -->
+
+    <nav>
+      <ul>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+        <li>
+          <a href="#how-to">How to</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section id="about" style="background-color: red">about</section>
+    <section id="contact" style="background-color: green">contact</section>
+    <section id="how-to" style="background-color: blue">how to</section>
+
+    <a class="back-to-top" href="#">^</a>
+  </body>
+</html>

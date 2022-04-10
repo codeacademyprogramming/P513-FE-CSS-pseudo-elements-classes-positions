@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  margin: 50px;
+}
+
+.another-page-link {
+  display: inline-block;
+  background-color: yellow;
+  color: black;
+  border: 2px solid black;
+  font-size: 20px;
+  padding: 5px;
+  text-decoration: none;
+  width: 200px;
+  white-space: nowrap;
+
+  /* transition-property: color background-color; */
+  /* transition-delay: 1s ; */
+  /* transition-duration: 300ms; */
+
+  transition: color 0.3s linear 0.3s, width 0.3s linear 0.3s,
+    background-color 0.3s linear 0.3s;
+  /* transition: all 0.3s linear 0.3s; */
+
+  /* transition-timing-function: ; */
+}
+
+.another-page-link:hover {
+  background-color: black;
+  color: yellow;
+  width: 300px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid black;
+}
+
+input:hover {
+  font-size: 20px;
+}
+
+.anchor-states-example:link {
+  color: purple;
+}
+
+.anchor-states-example:visited {
+  color: aquamarine;
+}
+
+.anchor-states-example:hover {
+  color: green;
+}
+
+.anchor-states-example:active {
+  color: red;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: yellow;
+}
+
+/* Selector specificity */
+/* 0 gold, 2 silver, 1 bronze */
+/* .wrapper p:first-child {
+  color: green;
+} */
+
+/* 0 gold, 1 silver, 1 bronze */
+p:first-of-type {
+  color: red;
+}
+
+ul li:nth-child(2n) {
+  color: red;
+}
